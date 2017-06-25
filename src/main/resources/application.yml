@@ -1,5 +1,10 @@
+server:
+  port: ${PORT:9400}
 spring:
-  mvc:
-    static-path-pattern: /**
-
-server.port: 8081
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Yneth/dash-io-config.git
